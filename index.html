@@ -2,10 +2,11 @@
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
-<input type="button" value="Turn on" id= "toggle">
+<input type="button" value="Off" id= "toggle" onclick="buttonswitch()">
 
 <div id ="box">
 
@@ -14,17 +15,26 @@
 </div>
 
 <script>
-	
-var d = document.getElementById("toggle").innerHTML; 
-d.addEventListener('onclick', changeText);
-function changeText(){ 
-	  
-if (d = "Turn on") {
-	d = "Turn off"
-	}
-}
-return d;
-}
+	var b = document.getElementById("toggle").value; 
+	// b.addEventListener("click", buttonswitch();
+
+function buttonswitch(){
+	console.log("I was clicked")
+	 if (b == "Off") {
+	  	  document.getElementById("toggle").value="On";
+	  	 var box = document.getElementById("box");
+	  	 box.addEventListener("mouseover", function(){
+	  	 	box.style.background-color="red"
+	  	 })
+	    }
+	    // else {
+     //      document.getElementById("toggle").value="Off";
+	    // }
+	    // return b;
+} 
+   
+
+
 </script>
 
 </body>
