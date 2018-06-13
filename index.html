@@ -16,20 +16,28 @@
 
 <script>
 	var b = document.getElementById("toggle").value; 
-	// b.addEventListener("click", buttonswitch();
+	    // b.addEventListener("click", buttonswitch());
 
-function buttonswitch(){
-	console.log("I was clicked")
-	 if (b == "Off") {
-	  	  document.getElementById("toggle").value="On";
-	  	 var box = document.getElementById("box");
-	  	 box.addEventListener("mouseover", function(){
-	  	 	box.style.background-color="red"
-	  	 })
-	    }
+ function buttonswitch(){
+ 	console.log("I was clicked")
+ 	  if (b == "Off") {
+ 	  	   document.getElementById("toggle").value="On";
+ 	  	  var box = document.getElementById("box");
+ 	  	  box.addEventListener("mouseover", function(){box.style.backgroundColor = "red";})
+
+ 	  	} else {
+
+ 	  	    {document.getElementById("toggle").value="Off";}
+
+ 	  	}
+            // box.style.background-color="red"
+ 	  	   
+// 	  	 box.style.background-color="red"	
+// 	  	 })
+ 	    // }
 	    // else {
      //      document.getElementById("toggle").value="Off";
-	    // }
+	     
 	    // return b;
 } 
    
