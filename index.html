@@ -23,23 +23,18 @@
  	  if (b == "Off") {
  	  	   document.getElementById("toggle").value="On";
  	  	  var box = document.getElementById("box");
- 	  	  box.addEventListener("mouseover", function(){box.style.backgroundColor = "red";})
+ 	  	  box.addEventListener("mouseover", function(){box.style.backgroundColor = "red";});
+ 	  	  box.addEventListener("mouseleave", function(){box.style.backgroundColor = "green";});
 
- 	  	} else {
+ 	  	 } else  { 
 
- 	  	    {document.getElementById("toggle").value="Off";}
+ 	  	     document.getElementById("toggle").value="Off";}
 
- 	  	}
-            // box.style.background-color="red"
- 	  	   
-// 	  	 box.style.background-color="red"	
-// 	  	 })
- 	    // }
-	    // else {
-     //      document.getElementById("toggle").value="Off";
-	     
-	    // return b;
+
+ 	  	
+            
 } 
+   
    
 
 
