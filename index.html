@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<input type="button" value="Off" id= "toggle" onclick="buttonswitch()">
+<input type="button" value="off" id="toggle">
 
 <div id ="box">
 
@@ -15,25 +15,67 @@
 </div>
 
 <script>
-	var b = document.getElementById("toggle").value; 
-	    // b.addEventListener("click", buttonswitch());
+	var b = document.getElementById("toggle"); 
+	    b.addEventListener("click", changeText);
 
- function buttonswitch(){
- 	console.log("I was clicked")
- 	  if (b == "Off") {
- 	  	   document.getElementById("toggle").value="On";
- 	  	  var box = document.getElementById("box");
- 	  	  box.addEventListener("mouseover", function(){box.style.backgroundColor = "red";});
- 	  	  box.addEventListener("mouseleave", function(){box.style.backgroundColor = "green";});
+// Check to the state of the button.... is the button an or off.
 
- 	  	 } else  { 
+function changeText(){
+	b.value = (b.value == 'on') ? 'off' : 'on';
+}
 
- 	  	     document.getElementById("toggle").value="Off";}
+var box = document.getElementById("box");
+
+box.addEventListener("mouseover", function(){
+if (b.value == "on") {
+	box.style.backgroundColor = "red";
+}
+});
+
+box.addEventListener("mouseleave", function(){
+	if (b.value == "on") {
+	box.style.backgroundColor = "green";
+}
+});
 
 
- 	  	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // function buttonswitch(){
+ // 	console.log("I was clicked")
+ // 	  if (b == "on") {
+ // 	  	   // document.getElementById("toggle").value="On";
+ // 	  	  var box = document.getElementById("box");
+ // 	  	  box.addEventListener("mouseover", function(){box.style.backgroundColor = "red";});
+ // 	  	  box.addEventListener("mouseleave", function(){box.style.backgroundColor = "green";});
+
+ // 	  	 } 
+
+ // 	  if (b == 'off'){
+ // 	  	console.log('button is off');
+ // 	  }
+
+ 	  	 // else { 
+ 	  	 // 	console.log("alt click")
+
+ 	  	 //     document.getElementById("toggle").value="Off";
+ 	  	 // }
             
-} 
+//} 
    
    
 
